@@ -1,2 +1,11 @@
 # belote-rl
-Train an AI agent to play the belote card game
+
+This repository contains code to train an AI agent to play the game of belote (https://www.nhfournier.es/en/como-jugar/belote/).
+
+# Run the code
+
+TODO
+
+# Files overview
+
+TODO
