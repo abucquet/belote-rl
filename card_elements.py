@@ -20,6 +20,7 @@ class Deck:
     '''
     TODO: implement two new functions
         self.deal: deals the cards in the deck to four players
+            return a list of hands (lists of cards)
         self.toArray: create an np.array with features that will be used in the model
     '''
 
@@ -47,16 +48,9 @@ class Deck:
         print("Deck:", end=" ")
         for card in self.cards:
             print(card, end=" ")
-
-        print("")
-        print("Side Pile:", end=" ")
-        for card in self.side_pile:
-            print(card, end=" ")
         print("")
 
     def copy(self, deep=True):
         new_deck = Deck([1], ["A"])
         new_deck.cards = self.cards[:]
-        new_deck.cache = self.cache[:]
-        new_deck.side_pile = self.side_pile[:]
         return new_deck
