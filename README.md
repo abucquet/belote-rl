@@ -9,3 +9,6 @@ TODO
 # Files overview
 
 TODO
+
+### Sources
+The card elements classes in this repo is adapated from Surya Dutta (https://github.com/suryadutta/solitaire)
