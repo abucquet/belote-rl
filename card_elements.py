@@ -7,10 +7,6 @@ class Card:
     def __init__(self, suit, value):
         self.suit = suit
         self.value = value
-        self.flipped = False
-        
-    def flip(self):
-        self.flipped = not self.flipped
         
     def __str__(self):        
         return "{0} {1}".format(self.value,self.suit)
@@ -43,6 +39,13 @@ class Deck:
     
     def shuffle(self):
         random.shuffle(self.cards)
+
+    def deal(self, n_hands):
+        hand_size = len(self.cards)//n_hands
+
+        return [
+            self.cards[i*hand_size:(i+1)*hand_size] for i in range(n_hands)
+        ]
 
     def print_all(self):  
         print("Deck:", end=" ")
