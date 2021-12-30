@@ -112,7 +112,7 @@ def play_trick(player_starting: int, hands: List[List[Card]], trump_suit) -> Tup
 
 	for _ in range(len(PLAYERS)):
 		valid_moves = find_valid_moves(hands[next_up], cards_played, trump_suit)
-		card_played = hands[next_up][0]
+		card_played = hands[next_up][0] # will be changed later
 		cards_played.append(card_played)
 		hands[next_up].remove(card_played)
 		next_up = (next_up + 1) % len(PLAYERS)
@@ -126,7 +126,7 @@ def play_trick(player_starting: int, hands: List[List[Card]], trump_suit) -> Tup
 			for card in cards_played]
 		)
 	if len(hands[0]) == 0:
-		points_scored += 10 # las trick is worth 10 extra points
+		points_scored += 10 # last trick is worth 10 extra points
 
 	return winner, points_scored
 
